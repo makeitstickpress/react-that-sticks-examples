@@ -57,20 +57,10 @@ export default function ChapterPage() {
             <Example key={example.id} example={example} chapterNum={chapter.num} />
           ))}
         </>
-      ) : chapter.envNote ? (
+      ) : (
         <div className="coming-soon env-note">
           <p className="coming-tag">Run these in your local project</p>
           <p>{chapter.envNote}</p>
-          <Link className="text-link" to="/chapter/1">
-            ← Back to Chapter 1
-          </Link>
-        </div>
-      ) : (
-        <div className="coming-soon">
-          <p className="coming-tag">Coming soon</p>
-          <p>
-            The live examples for this chapter haven't been added yet.
-          </p>
           <Link className="text-link" to="/chapter/1">
             ← Back to Chapter 1
           </Link>
