@@ -18,7 +18,7 @@ const ch1 = [
   {
     id: "first-component",
     heading: "Your first component",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A component is a JavaScript function that returns markup. React calls the function wherever it sees a capitalized tag like <ForecastCard />.",
     code: `function ForecastCard() {
@@ -47,7 +47,7 @@ export default function App() {
   {
     id: "use-it-three-times",
     heading: "Use it more than once",
-    instruction: "Edit App.jsx",
+    instruction: "Worked example",
     intro:
       "Write the tag three times and React calls the component three times, rendering three identical cards. Try adding a fourth.",
     code: `function ForecastCard() {
@@ -154,7 +154,7 @@ const ch2 = [
   {
     id: "three-cards",
     heading: "One component, three different cards",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "Each tag passes its own category, question, and odds as props. The component reads them from its props parameter.",
     code: `function ForecastCard(props) {
@@ -270,7 +270,7 @@ const ch3 = [
   {
     id: "values-and-text",
     heading: "Values and text can mix",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "Braces evaluate a JavaScript expression. The numbers come from variables; the percent signs and words stay as text. Change yes to 37 and watch both values update.",
     code: `export default function ForecastCard() {
@@ -344,7 +344,7 @@ const ch4 = [
   {
     id: "sections",
     heading: "Split the page into components",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A page header and a reusable section, each a component. ForecastSection wraps whatever you nest inside it through props.children.",
     code: `function ForecastCard(props) {
@@ -459,7 +459,7 @@ const ch5 = [
   {
     id: "map-list",
     heading: "Render a list from an array",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "Keep the forecasts in an array and map each item to one card. Each card gets a stable key from the forecast's id. Try adding a fourth object to the array.",
     code: `const forecasts = [
@@ -614,7 +614,7 @@ const ch6 = [
   {
     id: "working-state",
     heading: "Update state after the click",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "useState keeps a value between renders. Calling the setter stores the next value and asks React to render again.",
     code: `import { useState } from "react";
@@ -705,7 +705,7 @@ const ch7 = [
   {
     id: "watch-button",
     heading: "Update state from a click",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "Pass the function to onClick, don't call it. After the click, the setter stores true and the button re-renders as Watching.",
     code: `import { useState } from "react";
@@ -787,7 +787,7 @@ const ch8 = [
   {
     id: "controlled-input",
     heading: "Each keystroke updates state",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A controlled field: state supplies the input's value, and onChange writes each keystroke back to state. The paragraph below always matches.",
     code: `import { useState } from "react";
@@ -820,7 +820,7 @@ export default function ForecastForm() {
   {
     id: "controlled-select",
     heading: "Select a choice from state too",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A select follows the same pattern as the input: its value is the selected option, and its change handler stores the next one.",
     code: `import { useState } from "react";
@@ -851,7 +851,7 @@ export default function ForecastForm() {
   {
     id: "submit-form",
     heading: "Forms submit a browser event",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "preventDefault() stops the browser's built-in page navigation so the app handles the submission. Open the console and submit. Two useState calls in one component is normal — one per remembered value.",
     code: `import { useState } from "react";
@@ -896,7 +896,7 @@ export default function ForecastForm() {
   {
     id: "submitted-state",
     heading: "Keep submitted state separate from editing state",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A separate state value records that the form was submitted. The && condition shows the confirmation only once submitted is true.",
     code: `import { useState } from "react";
@@ -1048,7 +1048,7 @@ const ch10 = [
   {
     id: "no-effect",
     heading: "Rendering cannot make time pass",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "This countdown shows 10 and never moves. A render happens once; nothing schedules the next tick.",
     code: `import { useState } from "react";
@@ -1065,7 +1065,7 @@ export default function ClosingClock() {
   {
     id: "working",
     heading: "An Effect starts the timer",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "The Effect starts an interval after the screen appears, and its cleanup clears it. Now the countdown ticks.",
     code: `import { useEffect, useState } from "react";
@@ -1128,7 +1128,7 @@ const ch14 = [
   {
     id: "use-countdown",
     heading: "Extract a custom Hook",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "The countdown logic moves into useCountdown, an ordinary function that calls Hooks. The component just calls it and renders the result.",
     code: `import { useEffect, useState } from "react";
@@ -1169,7 +1169,7 @@ const ch15 = [
   {
     id: "lifting-state",
     heading: "Lift state to a shared parent",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "A button and a checkbox show the same fact. The parent stores the value and passes it, plus a toggle, to both — so they always agree.",
     code: `import { useState } from "react";
@@ -1211,7 +1211,7 @@ export default function WatchArea() {
   {
     id: "context",
     heading: "Share a value through context",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "The account lives in App and is provided through context. The badge and the form read it with useContext — no prop drilling. Spend some credits and both update.",
     code: `import { createContext, useContext, useState } from "react";
@@ -1260,7 +1260,7 @@ const ch16 = [
   {
     id: "reducer",
     heading: "Manage related state with a reducer",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "One reducer holds every rule for the ticket. Handlers just dispatch actions that name what happened; the reducer computes the next state. Submitting clears every field in one place.",
     code: `import { useReducer } from "react";
@@ -1422,7 +1422,7 @@ const ch18 = [
   {
     id: "error-boundary",
     heading: "Contain a render error",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "The middle forecast has no question, so its card throws while rendering. An error boundary around each card replaces just that one with a fallback; the others keep working.",
     code: `import { Component } from "react";
@@ -1491,7 +1491,7 @@ const ch20 = [
   {
     id: "routing",
     heading: "Add routing",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "Routes map a URL to a page component; Links move between them without a full reload. Click Home and Watchlist and watch the content swap.",
     dependencies: { "react-router-dom": "^6.28.0" },
@@ -1641,7 +1641,7 @@ const ch17 = [
   {
     id: "memo",
     heading: "memo and useMemo skip repeated work",
-    instruction: "Replace App.jsx",
+    instruction: "Worked example",
     intro:
       "The clock ticks every second, so App re-renders every second. Open the console: the memoized cards log only once, because their question prop never changes. useMemo reuses the filtered list while the array is the same.",
     code: `import { memo, useEffect, useMemo, useState } from "react";
@@ -1704,7 +1704,7 @@ const ch21 = [
   {
     id: "typed-forecast",
     heading: "Type a forecast and its props",
-    instruction: "Replace App.tsx",
+    instruction: "Worked example",
     intro:
       "TypeScript (.tsx). The Forecast type names the shape of the data, and ForecastCardProps names what the card accepts. In a real editor, passing a number where a string belongs is flagged before you run it.",
     template: "react-ts",
