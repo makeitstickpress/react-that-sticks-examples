@@ -239,8 +239,8 @@ body {
   background: #fdeccd;
 }
 
-/* ---------- Coming soon ---------- */
-.coming-soon {
+/* ---------- Env note (chapters that only run locally) ---------- */
+.env-note {
   border: 2px dashed var(--line);
   border-radius: 12px;
   padding: 2rem;
@@ -248,7 +248,7 @@ body {
   background: var(--panel);
 }
 
-.coming-tag {
+.env-note-tag {
   margin: 0 0 0.5rem;
   font-weight: 700;
   text-transform: uppercase;

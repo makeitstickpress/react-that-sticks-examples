@@ -58,8 +58,8 @@ export default function ChapterPage() {
           ))}
         </>
       ) : (
-        <div className="coming-soon env-note">
-          <p className="coming-tag">Run these in your local project</p>
+        <div className="env-note">
+          <p className="env-note-tag">Run these in your local project</p>
           <p>{chapter.envNote}</p>
           <Link className="text-link" to="/chapter/1">
             ← Back to Chapter 1
