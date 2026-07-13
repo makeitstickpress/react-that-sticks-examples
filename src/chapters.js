@@ -5,8 +5,7 @@
 //
 // Chapters whose examples need a real server, test runner, or build step carry
 // an `envNote` instead of examples — they run in the local project environment
-// the book sets up, not an inline sandbox. A few client-only chapters are not
-// populated yet and fall back to a generic "coming soon" state.
+// the book sets up, not an inline sandbox.
 
 export const parts = [
   "Part One · The building blocks",

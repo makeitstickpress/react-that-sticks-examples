@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { chapters, parts } from "./chapters.js";
 
-// Full book outline. Chapter 1 is live; the rest are listed so the navigation
-// shows the whole shape of the book, but link to a "coming soon" chapter page.
+// Full book outline: every chapter links to its live examples or, for the
+// local-only chapters, to the run-it-locally note.
 export default function Sidebar() {
   return (
     <aside className="sidebar">
