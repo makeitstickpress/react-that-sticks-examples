@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node generate-styles.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
