@@ -611,11 +611,36 @@ export default function App() {
 
 const ch6 = [
   {
-    id: "working-state",
-    heading: "Update state after the click",
+    id: "local-variable",
+    heading: "When a regular variable isn't enough",
     instruction: "Worked example",
     intro:
-      "useState keeps a value between renders. Calling the setter stores the next value and asks React to render again.",
+      "Click Technology. The label never changes — but the console below shows the handler really ran. Local variables don't survive renders, and changing them doesn't trigger one.",
+    code: `export default function App() {
+  let category = "All";
+
+  function chooseTechnology() {
+    category = "Technology";
+    console.log(category);
+  }
+
+  return (
+    <main>
+      <p>Selected: {category}</p>
+      <button onClick={chooseTechnology}>
+        Technology
+      </button>
+    </main>
+  );
+}
+`,
+  },
+  {
+    id: "working-state",
+    heading: "Update state after the click",
+    instruction: "Replace App.jsx",
+    intro:
+      "The variable becomes state, the assignment becomes a setter call. Click Technology: the setter stores the next value and triggers another render.",
     code: `import { useState } from "react";
 
 export default function App() {
@@ -637,15 +662,43 @@ export default function App() {
 `,
   },
   {
-    id: "your-turn",
-    heading: "Your turn: add another category",
-    instruction: "Exercise",
-    intro: "Add a chooseSpace handler and a Space button that stores \"Space\".",
+    id: "log-after-setter",
+    heading: "A handler uses the values of its render",
+    instruction: "Worked example",
+    intro:
+      "Click Technology and read the console: both logs show All. The handler closed over this render's value — the setter stores the next value, it doesn't change this one.",
     code: `import { useState } from "react";
 
 export default function App() {
-  const [category, setCategory] =
-    useState("All");
+  const [category, setCategory] = useState("All");
+
+  function chooseTechnology() {
+    console.log(category);
+    setCategory("Technology");
+    console.log(category);
+  }
+
+  return (
+    <main>
+      <p>Selected: {category}</p>
+      <button onClick={chooseTechnology}>
+        Technology
+      </button>
+    </main>
+  );
+}
+`,
+  },
+  {
+    id: "your-turn",
+    heading: "Your turn: add another category",
+    instruction: "Exercise",
+    intro:
+      "Add a Space button that calls setCategory(\"Space\"). The answer is one panel down.",
+    code: `import { useState } from "react";
+
+export default function App() {
+  const [category, setCategory] = useState("All");
 
   function chooseTechnology() {
     setCategory("Technology");
@@ -669,12 +722,12 @@ export default function App() {
     id: "answer",
     heading: "One possible answer",
     instruction: "Answer",
-    intro: "Each button has its own handler that stores a different category.",
+    intro:
+      "Each button hands its own value to the same setter. Every click stores the next value and triggers another render.",
     code: `import { useState } from "react";
 
 export default function App() {
-  const [category, setCategory] =
-    useState("All");
+  const [category, setCategory] = useState("All");
 
   function chooseTechnology() {
     setCategory("Technology");
