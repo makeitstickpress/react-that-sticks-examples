@@ -142,9 +142,8 @@ body {
   max-width: 78rem;
 }
 
-/* Keep prose readable, but let the example cards use the full width. */
-.chapter-lede,
-.example-intro {
+/* Keep the chapter lede readable; example intros run the full card width. */
+.chapter-lede {
   max-width: 46rem;
 }
 
@@ -175,7 +174,7 @@ body {
 
 .chapter-lede {
   color: var(--muted);
-  max-width: 44rem;
+
   margin: 0 0 2rem;
 }
 
@@ -219,7 +218,6 @@ body {
 .example-intro {
   color: var(--muted);
   margin: 0 0 1rem;
-  max-width: 44rem;
 }
 
 .link-btn {

@@ -155,7 +155,7 @@ const ch2 = [
     heading: "One component, three different cards",
     instruction: "Worked example",
     intro:
-      "Each tag passes its own category, question, and odds as props. The component reads them from its props parameter.",
+      "Each tag passes different props to the same component. Try changing a category or the odds — only that card changes.",
     code: `function ForecastCard(props) {
   return (
     <article className="forecast-card">
@@ -345,7 +345,7 @@ const ch4 = [
     heading: "Split the page into components",
     instruction: "Worked example",
     intro:
-      "A page header and a reusable section, each a component. ForecastSection wraps whatever you nest inside it through props.children.",
+      "PageHeader and ForecastSection are components rendered by App — and the card between ForecastSection's tags reaches it as props.children.",
     code: `function ForecastCard(props) {
   return (
     <article className="forecast-card">
@@ -460,7 +460,7 @@ const ch5 = [
     heading: "Render a list from an array",
     instruction: "Worked example",
     intro:
-      "Keep the forecasts in an array and map each item to one card. Each card gets a stable key from the forecast's id. Try adding a fourth object to the array.",
+      "map() transforms the array of forecasts into an array of cards. Try adding a fourth object to the array — a fourth card appears, no new JSX needed.",
     code: `const forecasts = [
   { id: "mars-orbit", category: "Space", question: "Mars orbit before 2035?", yes: 42 },
   { id: "battery", category: "Technology", question: "New battery tech this year?", yes: 28 },
@@ -759,7 +759,7 @@ const ch7 = [
     heading: "Update state from a click",
     instruction: "Worked example",
     intro:
-      "Pass the function to onClick, don't call it. After the click, the setter stores true and the button re-renders as Watching.",
+      "onClick receives the function itself — passed, not called. Click Watch: the setter stores true, and the next render shows Watching.",
     code: `import { useState } from "react";
 
 export default function ForecastCard() {
@@ -841,7 +841,7 @@ const ch8 = [
     heading: "Each keystroke updates state",
     instruction: "Worked example",
     intro:
-      "A controlled field: state supplies the input's value, and onChange writes each keystroke back to state. The paragraph below always matches.",
+      "This input is controlled: state supplies its value, and onChange stores each keystroke. Type in the field and watch the preview keep up.",
     code: `import { useState } from "react";
 
 export default function ForecastForm() {
@@ -874,7 +874,7 @@ export default function ForecastForm() {
     heading: "Select a choice from state too",
     instruction: "Worked example",
     intro:
-      "A select follows the same pattern as the input: its value is the selected option, and its change handler stores the next one.",
+      "A select works the same way: its value comes from state, and choosing an option stores the next value.",
     code: `import { useState } from "react";
 
 export default function ForecastForm() {
@@ -905,7 +905,7 @@ export default function ForecastForm() {
     heading: "Forms submit a browser event",
     instruction: "Worked example",
     intro:
-      "preventDefault() stops the browser's built-in page navigation so the app handles the submission. Open the console and submit. Two useState calls in one component is normal — one per remembered value.",
+      "preventDefault() stops the browser's full-page submit so your handler deals with it instead. Submit and read the console.",
     code: `import { useState } from "react";
 
 export default function ForecastForm() {
@@ -950,7 +950,7 @@ export default function ForecastForm() {
     heading: "Keep submitted state separate from editing state",
     instruction: "Worked example",
     intro:
-      "A separate state value records that the form was submitted. The && condition shows the confirmation only once submitted is true.",
+      "Submitting stores a separate saved flag, and && shows the confirmation only once it's true.",
     code: `import { useState } from "react";
 
 export default function ForecastForm() {
@@ -1223,7 +1223,7 @@ const ch15 = [
     heading: "Lift state to a shared parent",
     instruction: "Worked example",
     intro:
-      "A button and a checkbox show the same fact. The parent stores the value and passes it, plus a toggle, to both — so they always agree.",
+      "Both controls show the same fact because their shared parent owns the state and passes it down. Toggle either one — they can't disagree.",
     code: `import { useState } from "react";
 
 function WatchButton({ isWatching, onToggle }) {
@@ -1265,7 +1265,7 @@ export default function WatchArea() {
     heading: "Share a value through context",
     instruction: "Worked example",
     intro:
-      "The account lives in App and is provided through context. The badge and the form read it with useContext — no prop drilling. Spend some credits and both update.",
+      "The account is provided once, near the top, with context. The badge and the form read it with useContext — no props relayed through the middle. Spend some credits and both update.",
     code: `import { createContext, useContext, useState } from "react";
 
 const AccountContext = createContext(null);
@@ -1314,7 +1314,7 @@ const ch16 = [
     heading: "Manage related state with a reducer",
     instruction: "Worked example",
     intro:
-      "One reducer holds every rule for the ticket. Handlers just dispatch actions that name what happened; the reducer computes the next state. Submitting clears every field in one place.",
+      "Every rule for updating the ticket lives in one reducer. The handlers just dispatch actions saying what happened — try choosing a side and submitting.",
     code: `import { useReducer } from "react";
 
 const emptyTicket = { outcome: null, confidence: "", error: null };
@@ -1476,7 +1476,7 @@ const ch18 = [
     heading: "Contain a render error",
     instruction: "Worked example",
     intro:
-      "The middle forecast has no question, so its card throws while rendering. An error boundary around each card replaces just that one with a fallback; the others keep working.",
+      "The middle forecast is missing its question, so its card throws during render. The boundary catches it: one fallback card, and the rest of the list keeps working.",
     code: `import { Component } from "react";
 
 class ErrorBoundary extends Component {
@@ -1545,7 +1545,7 @@ const ch20 = [
     heading: "Add routing",
     instruction: "Worked example",
     intro:
-      "Routes map a URL to a page component; Links move between them without a full reload. Click Home and Watchlist and watch the content swap.",
+      "Routes associate each screen with a URL, and Link navigates without reloading the app. Click between Home and Watchlist — the address bar follows.",
     dependencies: { "react-router-dom": "^6.28.0" },
     code: `import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -1758,7 +1758,7 @@ const ch21 = [
     heading: "Type a forecast and its props",
     instruction: "Worked example",
     intro:
-      "TypeScript (.tsx). The Forecast type names the shape of the data, and ForecastCardProps names what the card accepts. In a real editor, passing a number where a string belongs is flagged before you run it.",
+      "The Forecast type describes the data's shape once; ForecastCardProps names what the component accepts. Try misspelling 'open' — the editor catches it.",
     template: "react-ts",
     file: "/App.tsx",
     code: `type Forecast = {
