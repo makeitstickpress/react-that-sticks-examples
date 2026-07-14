@@ -46,6 +46,8 @@ export default function Example({ example, chapterNum }) {
           editorHeight: 480,
           showLineNumbers: true,
           showTabs: false,
+          showConsoleButton: true,
+          showConsole: example.code.includes("console."),
           editorWidthPercentage: 52,
           initMode: "user-visible",
         }}
