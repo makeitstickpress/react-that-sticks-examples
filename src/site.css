@@ -348,3 +348,30 @@ body {
     height: 320px;
   }
 }
+
+/* ---- assembled-app footer link ---- */
+
+.sidebar-foot {
+  margin-top: auto;
+  padding: 14px 18px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.sidebar-foot .assembled-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ffd94d;
+  text-decoration: none;
+}
+
+.sidebar-foot .assembled-link:hover {
+  text-decoration: underline;
+}
+
+.sidebar-foot p {
+  margin: 4px 0 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+}

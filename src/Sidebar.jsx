@@ -41,6 +41,16 @@ export default function Sidebar() {
           </div>
         ))}
       </nav>
+
+      <div className="sidebar-foot">
+        <a
+          className="assembled-link"
+          href="https://stackblitz.com/github/makeitstickpress/forecast"
+        >
+          The assembled app →
+        </a>
+        <p>Every chapter's pieces, composed into the finished Forecast.</p>
+      </div>
     </aside>
   );
 }
