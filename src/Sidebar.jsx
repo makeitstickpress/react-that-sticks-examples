@@ -49,7 +49,7 @@ export default function Sidebar() {
         >
           The assembled app →
         </a>
-        <p>Every chapter's pieces, composed into the finished Forecast. Ad blockers can stop it loading — allow stackblitz.com.</p>
+        <p>Every chapter's pieces, composed into the finished Forecast. Ad blockers can stop it loading — turn yours off for stackblitz.com.</p>
       </div>
     </aside>
   );

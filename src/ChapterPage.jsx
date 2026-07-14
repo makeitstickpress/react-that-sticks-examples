@@ -71,8 +71,8 @@ export default function ChapterPage() {
             >
               open it on StackBlitz →
             </a>{" "}
-            (if it stalls while loading, allow StackBlitz through your ad
-            blocker — its in-browser runtime is often mistaken for a tracker)
+            (if it stalls while loading, turn off your ad blocker for
+            stackblitz.com — its in-browser runtime is often mistaken for a tracker)
           </p>
           <Link className="text-link" to="/chapter/1">
             ← Back to Chapter 1
