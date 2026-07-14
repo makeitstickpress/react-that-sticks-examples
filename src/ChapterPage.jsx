@@ -61,6 +61,17 @@ export default function ChapterPage() {
         <div className="env-note">
           <p className="env-note-tag">Run these in your local project</p>
           <p>{chapter.envNote}</p>
+          <p>
+            Prefer not to install anything? The finished Forecast app — with
+            this chapter's pieces and the data server included — runs complete
+            in your browser:{" "}
+            <a
+              className="text-link"
+              href="https://stackblitz.com/github/makeitstickpress/forecast"
+            >
+              open it on StackBlitz →
+            </a>
+          </p>
           <Link className="text-link" to="/chapter/1">
             ← Back to Chapter 1
           </Link>
