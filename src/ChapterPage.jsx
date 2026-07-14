@@ -70,7 +70,9 @@ export default function ChapterPage() {
               href="https://stackblitz.com/github/makeitstickpress/forecast"
             >
               open it on StackBlitz →
-            </a>
+            </a>{" "}
+            (if it stalls while loading, allow StackBlitz through your ad
+            blocker — its in-browser runtime is often mistaken for a tracker)
           </p>
           <Link className="text-link" to="/chapter/1">
             ← Back to Chapter 1
