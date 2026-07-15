@@ -142,7 +142,8 @@ body {
   max-width: 78rem;
 }
 
-/* Keep the chapter lede readable; example intros run the full card width. */
+/* Keep intro prose at a readable measure — the chapter lede and every example
+   intro share the same max-width so the text columns line up. */
 .chapter-lede {
   max-width: 46rem;
 }
@@ -216,6 +217,7 @@ body {
 }
 
 .example-intro {
+  max-width: 46rem;
   color: var(--muted);
   margin: 0 0 1rem;
 }
