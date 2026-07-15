@@ -1890,7 +1890,7 @@ export const chapters = [
   { num: 10, slug: "effects", topic: "Effects", title: "Make a countdown tick", part: 0, examples: ch10 },
   { num: 11, slug: "data-loading", topic: "Data loading", title: "Load the forecast from the server", part: 1, examples: [], envNote: dataNote },
   { num: 12, slug: "pending-ui", topic: "Pending UI", title: "Show loading and error states", part: 1, examples: [], envNote: dataNote },
-  { num: 13, slug: "optimistic-ui", topic: "Optimistic UI", title: "Update before a request finishes", part: 1, examples: [], envNote: dataNote },
+  { num: 13, slug: "optimistic-ui", topic: "Optimistic UI", title: "Update the interface before a request finishes", part: 1, examples: [], envNote: dataNote },
   { num: 14, slug: "custom-hooks", topic: "Custom hooks", title: "Reuse stateful logic", part: 1, examples: ch14 },
   { num: 15, slug: "sharing-state", topic: "Sharing state", title: "Share state between components", part: 1, examples: ch15 },
   { num: 16, slug: "reducers", topic: "Reducers", title: "Manage related state with a reducer", part: 1, examples: ch16 },
