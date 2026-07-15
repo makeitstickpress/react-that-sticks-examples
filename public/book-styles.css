@@ -93,10 +93,10 @@ button {
   padding: 0.4rem 0.9rem;
   border: 2px solid #18212f;
   border-radius: 8px;
-  background: #f2f5fb;
-  box-shadow: 0 2px 0 rgba(24, 33, 47, 0.12);
+  background: #ffd94d;
+  box-shadow: 0 2px 0 rgba(24, 33, 47, 0.35);
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 

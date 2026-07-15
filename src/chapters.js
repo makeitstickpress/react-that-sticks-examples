@@ -1887,7 +1887,7 @@ export const chapters = [
   { num: 7, slug: "events", topic: "Events", title: "Handle click events", part: 0, examples: ch7 },
   { num: 8, slug: "forms", topic: "Forms", title: "Control form fields with state", part: 0, examples: ch8 },
   { num: 9, slug: "conditional-rendering", topic: "Conditional rendering", title: "Render different markup conditionally", part: 0, examples: ch9 },
-  { num: 10, slug: "effects", topic: "Effects", title: "Synchronize with a timer", part: 0, examples: ch10 },
+  { num: 10, slug: "effects", topic: "Effects", title: "Make a countdown tick", part: 0, examples: ch10 },
   { num: 11, slug: "data-loading", topic: "Data loading", title: "Load the forecast from the server", part: 1, examples: [], envNote: dataNote },
   { num: 12, slug: "pending-ui", topic: "Pending UI", title: "Show loading and error states", part: 1, examples: [], envNote: dataNote },
   { num: 13, slug: "optimistic-ui", topic: "Optimistic UI", title: "Update before a request finishes", part: 1, examples: [], envNote: dataNote },
