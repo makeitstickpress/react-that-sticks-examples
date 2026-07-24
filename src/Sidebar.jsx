@@ -45,7 +45,9 @@ export default function Sidebar() {
       <div className="sidebar-foot">
         <a
           className="assembled-link"
-          href="https://stackblitz.com/github/makeitstickpress/forecast"
+          href="https://stackblitz.com/github/makeitstickpress/forecast?file=src%2FApp.jsx"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           The assembled app →
         </a>

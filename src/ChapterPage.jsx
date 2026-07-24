@@ -67,7 +67,9 @@ export default function ChapterPage() {
             in your browser:{" "}
             <a
               className="text-link"
-              href="https://stackblitz.com/github/makeitstickpress/forecast"
+              href="https://stackblitz.com/github/makeitstickpress/forecast?file=src%2FApp.jsx"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               open it on StackBlitz →
             </a>{" "}
